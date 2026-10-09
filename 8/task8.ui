@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>1000</width><height>780</height></rect>
+  </property>
+  <property name="windowTitle"><string>Task8 — L-системы</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="vLayout">
+
+    <item>
+     <layout class="QHBoxLayout" name="hTop">
+      <item>
+       <widget class="QPushButton" name="btnOpen">
+        <property name="text"><string>Открыть файл…</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnReload">
+        <property name="text"><string>Перезагрузить</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnFit">
+        <property name="text"><string>Вписать в окно</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSavePng">
+        <property name="text"><string>Сохранить PNG</string></property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="sp1">
+        <property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property>
+        <property name="sizeType"><enum>QSizePolicy::Policy::Expanding</enum></property>
+        <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblTitle">
+        <property name="text"><string>Файл не загружен</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <item>
+     <widget class="QLabel" name="lblCanvas">
+      <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+      <property name="minimumSize"><size><width>400</width><height>400</height></size></property>
+      <property name="styleSheet"><string>QLabel { background:#fafafa; border:1px solid #bbb; }</string></property>
+      <property name="text"><string>Откройте файл с определением L-системы</string></property>
+     </widget>
+    </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="hSlider">
+      <item>
+       <widget class="QLabel" name="lblStepCaption">
+        <property name="text"><string>Шаг эволюции:</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="sliderStep">
+        <property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property>
+        <property name="minimum"><number>0</number></property>
+        <property name="maximum"><number>0</number></property>
+        <property name="value"><number>0</number></property>
+        <property name="singleStep"><number>1</number></property>
+        <property name="pageStep"><number>1</number></property>
+        <property name="tracking"><bool>true</bool></property>
+        <property name="tickPosition"><enum>QSlider::TickPosition::TicksBelow</enum></property>
+        <property name="tickInterval"><number>1</number></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblStepValue">
+        <property name="text"><string>0 / 0</string></property>
+        <property name="minimumWidth"><number>80</number></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="hInfo">
+      <item>
+       <widget class="QLabel" name="lblAxiom">
+        <property name="text"><string>Аксиома: —</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblAngle">
+        <property name="text"><string>Угол: —</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblRules">
+        <property name="text"><string>Правил: —</string></property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="sp2">
+        <property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property>
+        <property name="sizeType"><enum>QSizePolicy::Policy::Expanding</enum></property>
+        <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblLength">
+        <property name="text"><string>Длина строки: —</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

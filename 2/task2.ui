@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>700</width><height>500</height></rect>
+  </property>
+  <property name="windowTitle"><string>Task2 — Текстовый редактор</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="hButtons">
+      <item><widget class="QPushButton" name="btnNew"><property name="text"><string>Новый</string></property></widget></item>
+      <item><widget class="QPushButton" name="btnOpen"><property name="text"><string>Открыть</string></property></widget></item>
+      <item><widget class="QPushButton" name="btnSave"><property name="text"><string>Сохранить</string></property></widget></item>
+      <item><widget class="QPushButton" name="btnSaveAs"><property name="text"><string>Сохранить как…</string></property></widget></item>
+      <item>
+       <spacer name="sp">
+        <property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property>
+        <property name="sizeType"><enum>QSizePolicy::Policy::Expanding</enum></property>
+        <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+       </spacer>
+      </item>
+      <item><widget class="QLabel" name="lblState"><property name="text"><string>Новый файл</string></property></widget></item>
+     </layout>
+    </item>
+    <item><widget class="QTextEdit" name="textEdit"/></item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

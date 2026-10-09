@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>960</width><height>760</height></rect>
+  </property>
+  <property name="windowTitle"><string>Task7 — Фортепиано</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="vLayout">
+
+    <item>
+     <layout class="QHBoxLayout" name="hTop">
+      <item>
+       <widget class="QPushButton" name="btnPickFolder">
+        <property name="text"><string>Папка со звуками…</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnCheckFiles">
+        <property name="text"><string>Проверить файлы</string></property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="sp1">
+        <property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property>
+        <property name="sizeType"><enum>QSizePolicy::Policy::Expanding</enum></property>
+        <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblFolder">
+        <property name="text"><string>Папка: sounds/</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <item>
+     <widget class="QGroupBox" name="gbPiano">
+      <property name="title"><string>Клавиши</string></property>
+      <layout class="QHBoxLayout" name="hPiano">
+       <item>
+        <widget class="QPushButton" name="btnC4">
+         <property name="text"><string>C4</string></property>
+         <property name="minimumSize"><size><width>70</width><height>150</height></size></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnD4">
+         <property name="text"><string>D4</string></property>
+         <property name="minimumSize"><size><width>70</width><height>150</height></size></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnE4">
+         <property name="text"><string>E4</string></property>
+         <property name="minimumSize"><size><width>70</width><height>150</height></size></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnF4">
+         <property name="text"><string>F4</string></property>
+         <property name="minimumSize"><size><width>70</width><height>150</height></size></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnG4">
+         <property name="text"><string>G4</string></property>
+         <property name="minimumSize"><size><width>70</width><height>150</height></size></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnA4">
+         <property name="text"><string>A4</string></property>
+         <property name="minimumSize"><size><width>70</width><height>150</height></size></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnB4">
+         <property name="text"><string>B4</string></property>
+         <property name="minimumSize"><size><width>70</width><height>150</height></size></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnC5">
+         <property name="text"><string>C5</string></property>
+         <property name="minimumSize"><size><width>70</width><height>150</height></size></property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QGroupBox" name="gbMelodies">
+      <property name="title"><string>Мелодии</string></property>
+      <layout class="QVBoxLayout" name="vMel">
+       <item>
+        <layout class="QHBoxLayout" name="hMel">
+         <item>
+          <widget class="QPushButton" name="btnMel1">
+           <property name="text"><string>Гамма вверх</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnMel2">
+           <property name="text"><string>Гамма вниз</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnMel3">
+           <property name="text"><string>Трезвучие C-dur вверх</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnMel4">
+           <property name="text"><string>Трезвучие C-dur вниз</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="hTempo">
+         <item>
+          <widget class="QLabel" name="lblTempoCaption">
+           <property name="text"><string>Задержка между нотами:</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="sliderTempo">
+           <property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property>
+           <property name="minimum"><number>150</number></property>
+           <property name="maximum"><number>1500</number></property>
+           <property name="singleStep"><number>50</number></property>
+           <property name="pageStep"><number>100</number></property>
+           <property name="value"><number>700</number></property>
+           <property name="tracking"><bool>true</bool></property>
+           <property name="tickPosition"><enum>QSlider::TickPosition::TicksBelow</enum></property>
+           <property name="tickInterval"><number>150</number></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblTempoValue">
+           <property name="text"><string>700 мс</string></property>
+           <property name="minimumWidth"><number>70</number></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnStopPlayback">
+           <property name="text"><string>■ Стоп воспроизведение</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QGroupBox" name="gbPlaylist">
+      <property name="title"><string>Запись и воспроизведение последовательности</string></property>
+      <layout class="QVBoxLayout" name="vPlaylist">
+       <item>
+        <layout class="QHBoxLayout" name="hPlaylistButtons">
+         <item>
+          <widget class="QPushButton" name="btnRecord">
+           <property name="text"><string>● Записать</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnStopRecord">
+           <property name="text"><string>■ Стоп запись</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnPlay">
+           <property name="text"><string>▶ Воспроизвести</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnRemoveSelected">
+           <property name="text"><string>Удалить выбранное</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnClearList">
+           <property name="text"><string>Очистить всё</string></property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="sp2">
+           <property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property>
+           <property name="sizeType"><enum>QSizePolicy::Policy::Expanding</enum></property>
+           <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblRecordState">
+           <property name="text"><string>Не записываем</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="hPlaylistBody">
+         <item>
+          <widget class="QListWidget" name="listNotes">
+           <property name="minimumSize"><size><width>220</width><height>150</height></size></property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="vEdit">
+           <item>
+            <widget class="QPushButton" name="btnAddNote">
+             <property name="text"><string>+ Добавить ноту</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnRemoveNote">
+             <property name="text"><string>− Удалить выбранное</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnMoveUp">
+             <property name="text"><string>↑ Вверх</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnMoveDown">
+             <property name="text"><string>↓ Вниз</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnPlayOne">
+             <property name="text"><string>▶ Проиграть выбранное</string></property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="sp3">
+             <property name="orientation"><enum>Qt::Orientation::Vertical</enum></property>
+             <property name="sizeType"><enum>QSizePolicy::Policy::Expanding</enum></property>
+             <property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

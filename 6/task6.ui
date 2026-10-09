@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>800</width><height>650</height></rect>
+  </property>
+  <property name="windowTitle"><string>Task6 — Смайлик</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="vLayout">
+    <item>
+     <layout class="QHBoxLayout" name="hTop">
+      <item>
+       <widget class="QPushButton" name="btnColor">
+        <property name="text"><string>Выбрать цвет…</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnReset">
+        <property name="text"><string>Сбросить</string></property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="sp">
+        <property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property>
+        <property name="sizeType"><enum>QSizePolicy::Policy::Expanding</enum></property>
+        <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblColorCaption">
+        <property name="text"><string>Цвет:</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblColorPreview">
+        <property name="text"><string></string></property>
+        <property name="minimumSize"><size><width>40</width><height>24</height></size></property>
+        <property name="maximumSize"><size><width>40</width><height>24</height></size></property>
+        <property name="styleSheet"><string>QLabel { background:#ffd400; border:1px solid #888; }</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="lblCanvas">
+      <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+      <property name="minimumSize"><size><width>400</width><height>400</height></size></property>
+      <property name="styleSheet"><string>QLabel { background:#f0f0f0; border:1px solid #bbb; }</string></property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="hSlider">
+      <item>
+       <widget class="QLabel" name="lblScaleCaption">
+        <property name="text"><string>Масштаб:</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="sliderScale">
+        <property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property>
+        <property name="minimum"><number>10</number></property>
+        <property name="maximum"><number>100</number></property>
+        <property name="singleStep"><number>5</number></property>
+        <property name="pageStep"><number>10</number></property>
+        <property name="value"><number>100</number></property>
+        <property name="tracking"><bool>true</bool></property>
+        <property name="tickPosition"><enum>QSlider::TickPosition::TicksBelow</enum></property>
+        <property name="tickInterval"><number>10</number></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblScaleValue">
+        <property name="text"><string>100%</string></property>
+        <property name="minimumWidth"><number>60</number></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

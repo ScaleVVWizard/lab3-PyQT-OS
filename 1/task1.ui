@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x><y>0</y><width>520</width><height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Task1 — статистика чисел</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="hButtons">
+      <item><widget class="QPushButton" name="btnLoad"><property name="text"><string>Загрузить</string></property></widget></item>
+      <item><widget class="QPushButton" name="btnSave"><property name="text"><string>Сохранить</string></property></widget></item>
+      <item><widget class="QPushButton" name="btnClear"><property name="text"><string>Очистить</string></property></widget></item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="gbStats">
+      <property name="title"><string>Статистика</string></property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0"><widget class="QLabel" name="lblMax"><property name="text"><string>Максимум:</string></property></widget></item>
+       <item row="0" column="1"><widget class="QLineEdit" name="edMax"><property name="readOnly"><bool>true</bool></property></widget></item>
+       <item row="1" column="0"><widget class="QLabel" name="lblMin"><property name="text"><string>Минимум:</string></property></widget></item>
+       <item row="1" column="1"><widget class="QLineEdit" name="edMin"><property name="readOnly"><bool>true</bool></property></widget></item>
+       <item row="2" column="0"><widget class="QLabel" name="lblAvg"><property name="text"><string>Среднее:</string></property></widget></item>
+       <item row="2" column="1"><widget class="QLineEdit" name="edAvg"><property name="readOnly"><bool>true</bool></property></widget></item>
+       <item row="3" column="0"><widget class="QLabel" name="lblCount"><property name="text"><string>Количество:</string></property></widget></item>
+       <item row="3" column="1"><widget class="QLineEdit" name="edCount"><property name="readOnly"><bool>true</bool></property></widget></item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPlainTextEdit" name="txtLog">
+      <property name="readOnly"><bool>true</bool></property>
+      <property name="placeholderText"><string>Журнал событий…</string></property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

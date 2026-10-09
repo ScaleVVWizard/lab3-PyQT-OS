@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>900</width><height>650</height></rect>
+  </property>
+  <property name="windowTitle"><string>Task3 — Каналы и поворот</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="hLayout">
+    <item>
+     <widget class="QGroupBox" name="gbControls">
+      <property name="title"><string>Управление</string></property>
+      <property name="maximumWidth"><number>260</number></property>
+      <layout class="QVBoxLayout" name="vLayout">
+       <item>
+        <widget class="QPushButton" name="btnOpen">
+         <property name="text"><string>Открыть изображение</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="gbChannels">
+         <property name="title"><string>Цветовой канал</string></property>
+         <layout class="QVBoxLayout" name="vCh">
+          <item>
+           <widget class="QRadioButton" name="rbAll">
+            <property name="text"><string>Все каналы</string></property>
+            <property name="checked"><bool>true</bool></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rbR">
+            <property name="text"><string>Только R</string></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rbG">
+            <property name="text"><string>Только G</string></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rbB">
+            <property name="text"><string>Только B</string></property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="gbRotate">
+         <property name="title"><string>Поворот</string></property>
+         <layout class="QHBoxLayout" name="hRot">
+          <item>
+           <widget class="QPushButton" name="btnRotLeft">
+            <property name="text"><string>⟲ 90° влево</string></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnRotRight">
+            <property name="text"><string>⟳ 90° вправо</string></property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnReset">
+         <property name="text"><string>Сбросить</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblInfo">
+         <property name="text"><string>Файл не загружен</string></property>
+         <property name="wordWrap"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="sp">
+         <property name="orientation"><enum>Qt::Orientation::Vertical</enum></property>
+         <property name="sizeType"><enum>QSizePolicy::Policy::Expanding</enum></property>
+         <property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lblImage">
+      <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+      <property name="minimumSize"><size><width>400</width><height>400</height></size></property>
+      <property name="styleSheet"><string>QLabel { background:#222; color:#aaa; }</string></property>
+      <property name="text"><string>Изображение не загружено</string></property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
